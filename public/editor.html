@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Article - Team Wiki</title>
+  <link rel="stylesheet" href="/css/modern-styles.css">
+</head>
+
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar__header">
+        <a href="/dashboard.html" class="sidebar__brand">
+          <div class="sidebar__brand-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+            </svg>
+          </div>
+          <span>Team Wiki</span>
+        </a>
+      </div>
+
+      <nav class="sidebar__nav">
+        <div class="sidebar__section">
+          <p class="sidebar__section-title">Main</p>
+          <a href="/dashboard.html" class="sidebar__link">
+            <svg class="sidebar__link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+            </svg>
+            <span>Dashboard</span>
+          </a>
+          <a href="/my-articles.html" class="sidebar__link">
+            <svg class="sidebar__link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            <span>My Articles</span>
+          </a>
+          <a href="/shared.html" class="sidebar__link">
+            <svg class="sidebar__link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+            <span>Shared With Me</span>
+          </a>
+        </div>
+
+        <div class="sidebar__section">
+          <p class="sidebar__section-title">Actions</p>
+          <a href="/create.html" class="sidebar__link">
+            <svg class="sidebar__link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+            <span>Create Article</span>
+          </a>
+          <a href="/search.html" class="sidebar__link">
+            <svg class="sidebar__link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+            <span>Search</span>
+          </a>
+        </div>
+
+        <div class="sidebar__section">
+          <p class="sidebar__section-title">Settings</p>
+          <a href="/settings.html" class="sidebar__link">
+            <svg class="sidebar__link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <span>Settings</span>
+          </a>
+          <a href="#" class="sidebar__link" id="logout-link">
+            <svg class="sidebar__link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+            </svg>
+            <span>Logout</span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="sidebar__footer">
+        <div class="sidebar__user">
+          <div class="sidebar__user-avatar" id="user-avatar">U</div>
+          <div class="sidebar__user-info">
+            <div class="sidebar__user-name" id="user-name">User</div>
+            <div class="sidebar__user-role" id="user-role">Editor</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Sidebar Overlay (Mobile) -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Editor Container -->
+      <div class="editor-container" style="margin: 24px; min-height: calc(100vh - 48px);">
+        <!-- Editor Header -->
+        <div class="editor-header">
+          <div style="flex: 1;">
+            <input type="text" class="editor-title-input" id="article-title" placeholder="Article Title"
+              autocomplete="off">
+          </div>
+          <div class="flex gap-2">
+            <button class="btn btn--secondary btn--sm" id="toggle-preview-btn">Preview: ON</button>
+            <a href="#" class="btn btn--secondary btn--sm" id="view-btn">View</a>
+            <span id="save-status"
+              style="font-size: 0.875rem; color: var(--text-muted); display: flex; align-items: center;"></span>
+            <button class="btn btn--primary btn--sm" id="save-btn">Save Changes</button>
+          </div>
+        </div>
+
+        <!-- Editor Toolbar -->
+        <div class="editor-toolbar">
+          <button type="button" class="editor-toolbar__btn" onclick="insertMarkdown('**', '**')" title="Bold">
+            <strong>B</strong>
+          </button>
+          <button type="button" class="editor-toolbar__btn" onclick="insertMarkdown('*', '*')" title="Italic">
+            <em>I</em>
+          </button>
+          <button type="button" class="editor-toolbar__btn" onclick="insertMarkdown('# ' , '')" title="Heading">
+            H
+          </button>
+          <button type="button" class="editor-toolbar__btn" onclick="insertMarkdown('- ' , '')" title="List">
+            ☰
+          </button>
+          <button type="button" class="editor-toolbar__btn" onclick="insertMarkdown('> ' , '')" title="Quote">
+            "
+          </button>
+          <button type="button" class="editor-toolbar__btn" onclick="insertMarkdown('```\n', '\n```')"
+            title="Code Block">
+            {'</>'}
+          </button>
+          <button type="button" class="editor-toolbar__btn" onclick="insertMarkdown('[', '](url)')" title="Link">
+            🔗
+          </button>
+          <div style="margin-left: auto; display: flex; align-items: center; gap: 8px;">
+            <div style="width: 1px; height: 22px; background: var(--border-light); margin-right: 8px;"></div>
+            <label style="font-size: 0.875rem; color: var(--text-muted);">Tags:</label>
+            <input type="text" class="input" id="article-tags" placeholder="Add tags (comma separated)"
+              style="width: 200px; padding: 6px 10px; font-size: 0.8125rem;">
+          </div>
+        </div>
+
+        <!-- Editor Content -->
+        <div class="editor-content" style="display: flex; gap: 24px; height: calc(100vh - 220px);">
+          <!-- Left: Markdown Input -->
+          <div id="editor-pane" style="flex: 1; display: flex; flex-direction: column; border: 1px solid #dde2ef; border-radius: 12px; background: #ffffff; box-shadow: 0 4px 8px -1px rgba(15, 23, 42, 0.10); min-width: 0; overflow: hidden;">
+            <div style="padding: 12px 16px; border-bottom: 1px solid #dde2ef; background: #edf1f7; border-radius: 12px 12px 0 0; font-weight: 600; font-size: 0.875rem; color: #475569; flex-shrink: 0;">Markdown Source</div>
+            <textarea class="editor-textarea" id="article-content"
+              placeholder="Start writing your article here..."></textarea>
+          </div>
+          <!-- Right: Live Preview -->
+          <div id="preview-pane" style="flex: 1; display: flex; flex-direction: column; border: 1px solid #dde2ef; border-radius: 12px; background: #ffffff; box-shadow: 0 4px 8px -1px rgba(15, 23, 42, 0.10); min-width: 0;">
+            <div style="padding: 12px 16px; border-bottom: 1px solid #dde2ef; background: #edf1f7; border-radius: 12px 12px 0 0; font-weight: 600; font-size: 0.875rem; color: #475569;">Live Preview</div>
+            <div style="flex: 1; overflow-y: auto; overflow-x: hidden; padding: 24px; min-width: 0;">
+              <div id="editor-preview" class="markdown-body" style="word-wrap: break-word; overflow-wrap: break-word; word-break: break-word; min-width: 0;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="/js/api.js"></script>
+  <script src="/js/dashboard.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.0/dist/purify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked@14.1.0/marked.min.js"></script>
+  <script>
+    let articleId = null;
+    let lastSavedContent = '';
+    let autoSaveTimer;
+
+    // Initialize
+    initDashboard();
+    initSidebar();
+    initEditor();
+
+    async function initEditor() {
+      articleId = new URLSearchParams(window.location.search).get('id');
+
+      if (!articleId) {
+        showToast('No article ID provided', 'error');
+        window.location.href = '/dashboard.html';
+        return;
+      }
+
+      const titleInput = document.getElementById('article-title');
+      const contentInput = document.getElementById('article-content');
+      const tagsInput = document.getElementById('article-tags');
+      const saveBtn = document.getElementById('save-btn');
+      const viewBtn = document.getElementById('view-btn');
+      const saveStatus = document.getElementById('save-status');
+      const togglePreviewBtn = document.getElementById('toggle-preview-btn');
+      const previewPane = document.getElementById('preview-pane');
+      const editorPreview = document.getElementById('editor-preview');
+
+      // Toggle Preview
+      let previewOn = true;
+      togglePreviewBtn.addEventListener('click', () => {
+        previewOn = !previewOn;
+        if (previewOn) {
+          previewPane.style.display = 'block';
+          togglePreviewBtn.textContent = 'Preview: ON';
+        } else {
+          previewPane.style.display = 'none';
+          togglePreviewBtn.textContent = 'Preview: OFF';
+        }
+      });
+
+      function renderPreview() {
+        if (!previewOn) return;
+        editorPreview.innerHTML = DOMPurify.sanitize(marked.parse(contentInput.value || ''));
+      }
+
+      // Set view button link
+      viewBtn.href = `/article.html?id=${articleId}`;
+
+      // Load article data
+      try {
+        const article = await WikiAPI.getArticle(articleId);
+
+        // Check permissions
+        const user = WikiAPI.getUser();
+        const canEdit = article.currentUserPermission === 'editor' ||
+          article.currentUserPermission === 'owner' ||
+          article.author === user?.username;
+
+        if (!canEdit) {
+          showToast('You do not have permission to edit this article', 'error');
+          window.location.href = `/article.html?id=${articleId}`;
+          return;
+        }
+
+        titleInput.value = article.title || '';
+        contentInput.value = article.content || '';
+        tagsInput.value = (article.tags || []).join(', ');
+        lastSavedContent = article.content || '';
+
+        saveStatus.textContent = 'Loaded';
+
+        // Check for offline draft
+        const draft = getOfflineDraft(articleId);
+        if (draft && draft.content !== article.content) {
+          if (confirm('You have unsaved changes from a previous session. Would you like to restore them?')) {
+            titleInput.value = draft.title || article.title || '';
+            contentInput.value = draft.content || article.content || '';
+            tagsInput.value = (draft.tags || article.tags || []).join(', ');
+            showToast('Draft restored', 'info');
+          }
+          clearOfflineDraft(articleId);
+        }
+      } catch (err) {
+        showToast('Failed to load article', 'error');
+        console.error(err);
+      }
+
+      // Auto-resize textarea and live preview
+      contentInput.addEventListener('input', function () {
+        renderPreview();
+
+        // Auto-save draft
+        clearTimeout(autoSaveTimer);
+        saveStatus.textContent = 'Unsaved changes...';
+        autoSaveTimer = setTimeout(() => {
+          saveOfflineDraft(articleId, {
+            title: titleInput.value,
+            content: contentInput.value,
+            tags: tagsInput.value.split(',').map(t => t.trim()).filter(Boolean)
+          });
+          saveStatus.textContent = 'Draft saved locally';
+        }, 2000);
+      });
+
+      // Initial render
+      renderPreview();
+
+      // Save article
+      saveBtn.addEventListener('click', async () => {
+        const title = titleInput.value.trim();
+        const content = contentInput.value.trim();
+        const tags = tagsInput.value.split(',').map(t => t.trim()).filter(Boolean);
+
+        if (!title) {
+          showToast('Please enter a title', 'error');
+          titleInput.focus();
+          return;
+        }
+
+        saveBtn.disabled = true;
+        saveBtn.textContent = 'Saving...';
+        saveStatus.textContent = 'Saving...';
+
+        try {
+          await WikiAPI.updateArticle(articleId, { title, content, tags });
+          lastSavedContent = content;
+          clearOfflineDraft(articleId);
+          showToast('Article saved successfully!', 'success');
+          saveStatus.textContent = 'Saved';
+        } catch (err) {
+          showToast(err.message || 'Failed to save article', 'error');
+          saveStatus.textContent = 'Save failed - draft saved locally';
+          saveOfflineDraft(articleId, { title, content, tags });
+        } finally {
+          saveBtn.disabled = false;
+          saveBtn.textContent = 'Save Changes';
+        }
+      });
+
+      // Focus title on load
+      titleInput.focus();
+    }
+
+    // Insert markdown at cursor
+    window.insertMarkdown = function (before, after) {
+      const textarea = document.getElementById('article-content');
+      const start = textarea.selectionStart;
+      const end = textarea.selectionEnd;
+      const text = textarea.value;
+      const selection = text.substring(start, end);
+
+      const newText = text.substring(0, start) + before + selection + after + text.substring(end);
+      textarea.value = newText;
+
+      // Restore cursor position
+      const newCursorPos = start + before.length + selection.length;
+      textarea.setSelectionRange(newCursorPos, newCursorPos);
+      textarea.focus();
+
+      // Trigger input event for auto-save
+      textarea.dispatchEvent(new Event('input'));
+    };
+
+    // Offline draft functions
+    function saveOfflineDraft(id, data) {
+      const drafts = JSON.parse(localStorage.getItem('wiki_edit_drafts') || '{}');
+      drafts[id] = { ...data, savedAt: Date.now() };
+      localStorage.setItem('wiki_edit_drafts', JSON.stringify(drafts));
+    }
+
+    function getOfflineDraft(id) {
+      const drafts = JSON.parse(localStorage.getItem('wiki_edit_drafts') || '{}');
+      return drafts[id] || null;
+    }
+
+    function clearOfflineDraft(id) {
+      const drafts = JSON.parse(localStorage.getItem('wiki_edit_drafts') || '{}');
+      delete drafts[id];
+      localStorage.setItem('wiki_edit_drafts', JSON.stringify(drafts));
+    }
+
+    // Warn about unsaved changes when leaving
+    window.addEventListener('beforeunload', (e) => {
+      const content = document.getElementById('article-content').value;
+      if (content !== lastSavedContent) {
+        e.preventDefault();
+        e.returnValue = '';
+      }
+    });
+  </script>
+</body>
+
+</html>
